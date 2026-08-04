@@ -2,46 +2,100 @@
   <defs>
     <linearGradient id="hero-bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#0A0A14"/>
-      <stop offset="40%" style="stop-color:#1A1A2E"/>
+      <stop offset="35%" style="stop-color:#121626"/>
       <stop offset="100%" style="stop-color:#0A0A14"/>
     </linearGradient>
     <linearGradient id="gold-glow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.08"/>
-      <stop offset="50%" style="stop-color:#F5D76E;stop-opacity:0.12"/>
-      <stop offset="100%" style="stop-color:#B8960C;stop-opacity:0.05"/>
-    </linearGradient>
-    <radialGradient id="center-glow" cx="50%" cy="50%" r="50%">
       <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.06"/>
+      <stop offset="50%" style="stop-color:#F5D76E;stop-opacity:0.10"/>
+      <stop offset="100%" style="stop-color:#B8960C;stop-opacity:0.04"/>
+    </linearGradient>
+    <radialGradient id="center-glow" cx="50%" cy="45%" r="45%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.08"/>
+      <stop offset="40%" style="stop-color:#D4AF37;stop-opacity:0.04"/>
       <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:0"/>
     </radialGradient>
+    <radialGradient id="burst-glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" style="stop-color:#F5D76E;stop-opacity:0.05"/>
+      <stop offset="50%" style="stop-color:#D4AF37;stop-opacity:0.02"/>
+      <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:0"/>
+    </radialGradient>
+    <linearGradient id="diagonal-ray" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.03"/>
+      <stop offset="50%" style="stop-color:#F5D76E;stop-opacity:0.05"/>
+      <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="bottom-fade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A14;stop-opacity:0"/>
+      <stop offset="40%" style="stop-color:#0A0A14;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#0A0A14;stop-opacity:0.95"/>
+    </linearGradient>
   </defs>
+
+  <!-- Base background -->
   <rect width="1440" height="900" fill="url(#hero-bg)"/>
-  <!-- Ambient glow -->
+
+  <!-- Ambient gold glow -->
   <rect width="1440" height="900" fill="url(#gold-glow)"/>
+
+  <!-- Center burst glow -->
   <rect width="1440" height="900" fill="url(#center-glow)"/>
-  <!-- Studio architecture lines -->
-  <g stroke="#D4AF37" stroke-width="0.5" opacity="0.08">
-    <line x1="0" y1="300" x2="1440" y2="300"/>
+
+  <!-- Radial burst -->
+  <rect width="1440" height="900" fill="url(#burst-glow)"/>
+
+  <!-- Diagonal golden rays -->
+  <g opacity="0.15">
+    <polygon points="720,0 1440,450 1440,0" fill="url(#diagonal-ray)"/>
+    <polygon points="0,900 720,450 0,450" fill="url(#diagonal-ray)"/>
+    <polygon points="0,0 720,450 0,450" fill="url(#diagonal-ray)"/>
+    <polygon points="1440,450 1440,900 720,450" fill="url(#diagonal-ray)"/>
+  </g>
+
+  <!-- Studio architecture lines — depth layer 1 -->
+  <g stroke="#D4AF37" stroke-width="0.3" opacity="0.06">
+    <line x1="0" y1="200" x2="1440" y2="200"/>
+    <line x1="0" y1="400" x2="1440" y2="400"/>
     <line x1="0" y1="600" x2="1440" y2="600"/>
-    <line x1="480" y1="0" x2="480" y2="900"/>
-    <line x1="960" y1="0" x2="960" y2="900"/>
+    <line x1="0" y1="800" x2="1440" y2="800"/>
   </g>
-  <!-- Large shield watermark -->
-  <g transform="translate(720, 420)" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.05">
-    <path d="M0,-200 L150,-100 V100 C150,220 0,270 0,270 C0,270 -150,220 -150,100 V-100 L0,-200Z"/>
-    <path d="M0,-130 L100,-60 V50 C100,130 0,165 0,165 C0,165 -100,130 -100,50 V-60 L0,-130Z"/>
+
+  <!-- Studio architecture lines — depth layer 2 -->
+  <g stroke="#D4AF37" stroke-width="0.5" opacity="0.04">
+    <line x1="360" y1="0" x2="360" y2="900"/>
+    <line x1="720" y1="0" x2="720" y2="900"/>
+    <line x1="1080" y1="0" x2="1080" y2="900"/>
   </g>
-  <!-- Decorative dots -->
-  <g fill="#D4AF37" opacity="0.15">
-    <circle cx="200" cy="650" r="2"/>
-    <circle cx="350" cy="700" r="1.5"/>
-    <circle cx="500" cy="680" r="1"/>
-    <circle cx="950" cy="660" r="2"/>
-    <circle cx="1100" cy="700" r="1.5"/>
-    <circle cx="1250" cy="690" r="1"/>
-    <circle cx="150" cy="200" r="1.5"/>
-    <circle cx="1300" cy="180" r="1.5"/>
+
+  <!-- Large shield watermark — depth layer -->
+  <g transform="translate(720, 420)" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.04">
+    <path d="M0,-220 L165,-110 V110 C165,240 0,295 0,295 C0,295 -165,240 -165,110 V-110 L0,-220Z"/>
+    <path d="M0,-145 L110,-67 V55 C110,145 0,180 0,180 C0,180 -110,145 -110,55 V-67 L0,-145Z"/>
+    <path d="M0,-80 L55,-30 V30 C55,65 0,80 0,80 C0,80 -55,65 -55,30 V-30 L0,-80Z"/>
   </g>
+
+  <!-- Decorative stars / particles -->
+  <g fill="#D4AF37" opacity="0.2">
+    <circle cx="180" cy="650" r="2.5"/>
+    <circle cx="320" cy="720" r="1.5"/>
+    <circle cx="480" cy="680" r="1"/>
+    <circle cx="980" cy="640" r="2.5"/>
+    <circle cx="1120" cy="710" r="1.5"/>
+    <circle cx="1280" cy="670" r="1"/>
+    <circle cx="140" cy="180" r="2"/>
+    <circle cx="1320" cy="160" r="2"/>
+    <circle cx="600" cy="130" r="1.5"/>
+    <circle cx="850" cy="120" r="1.5"/>
+    <circle cx="70" cy="350" r="1"/>
+    <circle cx="1370" cy="380" r="1"/>
+  </g>
+
+  <!-- Subtle gold line accents -->
+  <g stroke="#D4AF37" stroke-width="0.5" opacity="0.08">
+    <line x1="0" y1="450" x2="100" y2="450"/>
+    <line x1="1340" y1="450" x2="1440" y2="450"/>
+  </g>
+
   <!-- Bottom fade -->
-  <rect x="0" y="750" width="1440" height="150" fill="url(#hero-bg)" opacity="0.8"/>
+  <rect x="0" y="700" width="1440" height="200" fill="url(#bottom-fade)"/>
 </svg>
