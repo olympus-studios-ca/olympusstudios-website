@@ -5,6 +5,39 @@
 
 ---
 
+## v1.0.1-alpha — 2026-08-04
+
+### Public Experience — WEB-002
+Full implementation of the Public Experience phase. Founder-approved WEB-002.
+
+### Major Changes
+- **Homepage:** Updated CTA links to public-facing Studio, production descriptions on featured cards, refined ambient hero background
+- **Productions:** Complete production identity packages for Woodland Pond, One Minute Wonders, Shadow Files with branded imagery, enhanced hero and detail sections
+- **Studio:** Full WEB-STUDIO-V01 implementation — Our Story, Our Mission, Meet Hermes, Production Engine (13 steps), Studio Departments, Philosophy & Engineering Standards
+- **OG/Social:** Branded 1200×630 OG preview image with shield logo, Organization schema (JSON-LD) on all pages, OG image alt text, Twitter site handle, theme-color meta, robots meta
+- **SEO:** Enhanced meta descriptions for all 7 pages, canonical URLs, structured data foundation
+- **Brand Assets:** Production identity SVGs (WP: forest pond + animals, OMW: clock face + particles, SF: evidence/case file markers)
+- **CSS:** New studio-page component classes (studio-heading, studio-text, studio-mission-*), prod-card-desc class for production descriptions
+
+### Build Milestone
+- **Total Pages:** 7 (all HTTP 200)
+- **Build Time:** ~0.11s
+- **Deployment:** Manual trigger (bf745282) — auto-deploy from GitHub push not triggering; GitHub webhook integration needs investigation
+- **Security:** All headers verified (CSP, HSTS, frame-deny, nosniff, permissions-policy, referrer)
+
+### Remaining Placeholders
+- OG default image is SVG (not WebP) — real OG image expected in v1.0.2-alpha
+- Apple touch icon referenced but not present
+- Department images reference `.webp` paths that don't exist yet
+- Future productions still generic placeholders
+
+### Known Issues
+- GitHub push to `main` does not auto-trigger Cloudflare Pages build (webhook integration issue)
+- All images remain SVG (no WebP production assets)
+- Sharp CVEs (2 high) remain deferred
+
+---
+
 ## v1.0.0-alpha — 2026-08-03
 
 ### Engineering Foundation
