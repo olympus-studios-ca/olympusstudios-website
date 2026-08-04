@@ -1,12 +1,15 @@
 ---
 layout: base.njk
 title: "Productions"
-description: "A growing universe of stories, knowledge, and imagination. Explore Olympus Studios productions."
+description: "A growing universe of stories, knowledge, and imagination. Explore Olympus Studios productions — Woodland Pond, One Minute Wonders, and Shadow Files."
 ---
 
+<!-- ═══════════════════════════════════════════════════════════
+     PRODUCTIONS HERO (WEB-PRODUCTIONS-V01A)
+     ═══════════════════════════════════════════════════════════ -->
 <section class="page-header">
   <div class="page-header-bg">
-    <img src="/assets/images/hero/productions-hero.svg" alt="Cinematic mountain landscape" loading="lazy">
+    <img src="/assets/images/hero/productions-hero.svg" alt="Cinematic film strip — Olympus Studios productions" loading="eager">
   </div>
   <div class="page-header-overlay"></div>
   <div class="page-header-content">
@@ -17,8 +20,15 @@ description: "A growing universe of stories, knowledge, and imagination. Explore
   </div>
 </section>
 
+<!-- ═══════════════════════════════════════════════════════════
+     ACTIVE PRODUCTIONS
+     ═══════════════════════════════════════════════════════════ -->
 <section class="section">
   <div class="container-wide">
+    <h2 class="section-title">ACTIVE PRODUCTIONS</h2>
+    <div class="gold-line"></div>
+    <p class="section-description">Each production is a unique universe with its own identity, voice, and audience. Explore the worlds we're building.</p>
+
     <div class="grid-3">
       {% for item in productions.productions %}
       <article class="prod-card" onclick="window.location.href='{{ item.url }}'" role="link" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){window.location.href='{{ item.url }}'}">
@@ -29,7 +39,7 @@ description: "A growing universe of stories, knowledge, and imagination. Explore
         <div class="prod-card-body">
           <div class="prod-card-tagline">{{ item.tagline }}</div>
           <h3 class="prod-card-title">{{ item.name }}</h3>
-          <p style="color:var(--text-secondary);font-size:var(--text-sm);margin-bottom:var(--space-4)">{{ item.description }}</p>
+          <p class="prod-card-desc">{{ item.description }}</p>
           <a class="prod-card-cta" href="{{ item.url }}" tabindex="-1">{{ item.cta }}</a>
         </div>
       </article>
@@ -38,6 +48,9 @@ description: "A growing universe of stories, knowledge, and imagination. Explore
   </div>
 </section>
 
+<!-- ═══════════════════════════════════════════════════════════
+     FUTURE PRODUCTIONS
+     ═══════════════════════════════════════════════════════════ -->
 <section class="section section-dark">
   <div class="container-wide">
     <span class="section-gold-label">Coming Soon</span>
@@ -60,6 +73,9 @@ description: "A growing universe of stories, knowledge, and imagination. Explore
   </div>
 </section>
 
+<!-- ═══════════════════════════════════════════════════════════
+     STORIES THAT MATTER
+     ═══════════════════════════════════════════════════════════ -->
 <section class="section">
   <div class="container">
     <div class="values-grid">
@@ -67,6 +83,10 @@ description: "A growing universe of stories, knowledge, and imagination. Explore
         <span class="section-gold-label">Stories That Matter</span>
         <h2>STORIES THAT MATTER</h2>
         <div class="gold-line"></div>
+        <p>
+          Every production at Olympus Studios is created with purpose. We believe
+          in stories that educate, entertain, and inspire positive change.
+        </p>
       </div>
       <div class="values-list">
         <div class="values-item">

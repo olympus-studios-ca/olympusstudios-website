@@ -35,11 +35,11 @@ productions:
 
 # Future productions (locked, shown with padlock)
 future_productions:
-  - label: "Future Production"
+  - label: "New Production"
     status: "In Development"
-  - label: "Future Production"
+  - label: "New Production"
     status: "In Development"
-  - label: "Future Production"
+  - label: "New Production"
     status: "In Development"
-  - label: "Future Production"
+  - label: "New Production"
     status: "In Development"

@@ -1,10 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1A1E2E"/>
-      <stop offset="100%" style="stop-color:#0D0E12"/>
+    <linearGradient id="omw-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A1A2E"/>
+      <stop offset="50%" style="stop-color:#16213E"/>
+      <stop offset="100%" style="stop-color:#0F3460"/>
+    </linearGradient>
+    <linearGradient id="omw-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E94560"/>
+      <stop offset="100%" style="stop-color:#FF6B6B"/>
     </linearGradient>
   </defs>
-  <rect width="600" height="400" fill="url(#bg)"/>
-  <text x="300" y="200" text-anchor="middle" fill="#D4AF37" font-family="serif" font-size="18" opacity="0.3">Production Image</text>
+  <rect width="600" height="400" fill="url(#omw-bg)"/>
+  <!-- Clock face -->
+  <circle cx="300" cy="200" r="80" fill="none" stroke="url(#omw-accent)" stroke-width="1.5" opacity="0.3"/>
+  <circle cx="300" cy="200" r="60" fill="none" stroke="url(#omw-accent)" stroke-width="1" opacity="0.2"/>
+  <!-- Clock hands -->
+  <line x1="300" y1="200" x2="300" y2="155" stroke="url(#omw-accent)" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="300" y1="200" x2="335" y2="200" stroke="url(#omw-accent)" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="300" cy="200" r="4" fill="#E94560"/>
+  <!-- Dots around clock -->
+  <g fill="#E94560" opacity="0.5">
+    <circle cx="300" cy="135" r="2"/>
+    <circle cx="335" cy="145" r="2"/>
+    <circle cx="360" cy="170" r="2"/>
+    <circle cx="365" cy="200" r="2"/>
+    <circle cx="360" cy="230" r="2"/>
+    <circle cx="335" cy="255" r="2"/>
+    <circle cx="300" cy="265" r="2"/>
+    <circle cx="265" cy="255" r="2"/>
+    <circle cx="240" cy="230" r="2"/>
+    <circle cx="235" cy="200" r="2"/>
+    <circle cx="240" cy="170" r="2"/>
+    <circle cx="265" cy="145" r="2"/>
+  </g>
+  <!-- Particles -->
+  <g fill="#A0A0B8" opacity="0.4">
+    <circle cx="100" cy="80" r="1.5"/>
+    <circle cx="500" cy="100" r="1.5"/>
+    <circle cx="150" cy="350" r="1"/>
+    <circle cx="450" cy="330" r="1.5"/>
+    <circle cx="520" cy="280" r="1"/>
+    <circle cx="80" cy="250" r="1"/>
+  </g>
+  <!-- Title -->
+  <text x="300" y="330" text-anchor="middle" font-family="Cinzel, Georgia, serif" font-size="28" font-weight="700" fill="#FFFFFF" letter-spacing="3">ONE MINUTE</text>
+  <text x="300" y="360" text-anchor="middle" font-family="Cinzel, Georgia, serif" font-size="28" font-weight="700" fill="#E94560" letter-spacing="3">WONDERS</text>
+  <text x="300" y="385" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="12" fill="#A0A0B8" letter-spacing="2">ONE MINUTE. ENDLESS CURIOSITY.</text>
 </svg>

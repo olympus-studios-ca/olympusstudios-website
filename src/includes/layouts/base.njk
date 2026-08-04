@@ -12,9 +12,10 @@
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="{{ site.locale }}">
-  <meta property="og:image" content="{{ site.url }}/assets/images/brand/og-default.webp">
+  <meta property="og:image" content="{{ site.url }}/assets/images/brand/og-default.svg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Olympus Studios — Premium Creative Production Studio">
 
   <!-- Canonical -->
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
@@ -23,7 +24,36 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
   <meta name="twitter:description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="twitter:image" content="{{ site.url }}/assets/images/brand/og-default.webp">
+  <meta name="twitter:image" content="{{ site.url }}/assets/images/brand/og-default.svg">
+  <meta name="twitter:site" content="@oneminutewondersai">
+
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Olympus Studios",
+    "url": "{{ site.url }}",
+    "description": "{{ site.description }}",
+    "logo": "{{ site.url }}/assets/images/brand/favicon.svg",
+    "sameAs": [
+      "{{ site.social.youtube }}",
+      "{{ site.social.instagram }}",
+      "{{ site.social.tiktok }}",
+      "{{ site.social.facebook }}"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "{{ site.brand.contact_email }}",
+      "contactType": "customer service"
+    }
+  }
+  </script>
+
+  <!-- Additional SEO -->
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="{{ site.author }}">
+  <meta name="theme-color" content="#0A0A14">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

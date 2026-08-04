@@ -1,17 +1,47 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0D0E12"/>
-      <stop offset="50%" style="stop-color:#1A1E2E"/>
-      <stop offset="100%" style="stop-color:#0D0E12"/>
+    <linearGradient id="hero-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A14"/>
+      <stop offset="40%" style="stop-color:#1A1A2E"/>
+      <stop offset="100%" style="stop-color:#0A0A14"/>
     </linearGradient>
-    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#D4AF37"/>
-      <stop offset="100%" style="stop-color:#B8860B"/>
+    <linearGradient id="gold-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.08"/>
+      <stop offset="50%" style="stop-color:#F5D76E;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#B8960C;stop-opacity:0.05"/>
     </linearGradient>
+    <radialGradient id="center-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.06"/>
+      <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:0"/>
+    </radialGradient>
   </defs>
-  <rect width="1440" height="900" fill="url(#bg)"/>
-  <circle cx="720" cy="450" r="300" fill="none" stroke="url(#gold)" stroke-width="0.5" opacity="0.15"/>
-  <circle cx="720" cy="450" r="200" fill="none" stroke="url(#gold)" stroke-width="0.3" opacity="0.1"/>
-  <path d="M720 250 L850 380 L800 550 L640 550 L590 380 Z" fill="none" stroke="url(#gold)" stroke-width="1" opacity="0.2"/>
+  <rect width="1440" height="900" fill="url(#hero-bg)"/>
+  <!-- Ambient glow -->
+  <rect width="1440" height="900" fill="url(#gold-glow)"/>
+  <rect width="1440" height="900" fill="url(#center-glow)"/>
+  <!-- Studio architecture lines -->
+  <g stroke="#D4AF37" stroke-width="0.5" opacity="0.08">
+    <line x1="0" y1="300" x2="1440" y2="300"/>
+    <line x1="0" y1="600" x2="1440" y2="600"/>
+    <line x1="480" y1="0" x2="480" y2="900"/>
+    <line x1="960" y1="0" x2="960" y2="900"/>
+  </g>
+  <!-- Large shield watermark -->
+  <g transform="translate(720, 420)" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.05">
+    <path d="M0,-200 L150,-100 V100 C150,220 0,270 0,270 C0,270 -150,220 -150,100 V-100 L0,-200Z"/>
+    <path d="M0,-130 L100,-60 V50 C100,130 0,165 0,165 C0,165 -100,130 -100,50 V-60 L0,-130Z"/>
+  </g>
+  <!-- Decorative dots -->
+  <g fill="#D4AF37" opacity="0.15">
+    <circle cx="200" cy="650" r="2"/>
+    <circle cx="350" cy="700" r="1.5"/>
+    <circle cx="500" cy="680" r="1"/>
+    <circle cx="950" cy="660" r="2"/>
+    <circle cx="1100" cy="700" r="1.5"/>
+    <circle cx="1250" cy="690" r="1"/>
+    <circle cx="150" cy="200" r="1.5"/>
+    <circle cx="1300" cy="180" r="1.5"/>
+  </g>
+  <!-- Bottom fade -->
+  <rect x="0" y="750" width="1440" height="150" fill="url(#hero-bg)" opacity="0.8"/>
 </svg>
