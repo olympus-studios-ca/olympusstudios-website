@@ -1,0 +1,71 @@
+# ═══════════════════════════════════════════════════════════════
+# Olympus Studios — Departments / Production Engine
+# ═══════════════════════════════════════════════════════════════
+# Configuration-driven: departments and the production engine steps.
+
+# The Olympus Production Engine — 13 steps
+production_engine:
+  - step: "IDEA"
+    icon: "bulb"
+  - step: "RESEARCH"
+    icon: "search"
+  - step: "EDITORIAL"
+    icon: "document"
+  - step: "CREATIVE REVIEW"
+    icon: "person"
+  - step: "STORYBOARDS"
+    icon: "film"
+  - step: "VISUAL PRODUCTION"
+    icon: "clapper"
+  - step: "NARRATION"
+    icon: "mic"
+  - step: "ASSEMBLY"
+    icon: "gear"
+  - step: "QUALITY ASSURANCE"
+    icon: "check"
+  - step: "FOUNDER APPROVAL"
+    icon: "approval"
+  - step: "PUBLISHING"
+    icon: "upload"
+  - step: "AUDIENCE INTELLIGENCE"
+    icon: "chart"
+  - step: "CONTINUOUS IMPROVEMENT"
+    icon: "refresh"
+
+# Studio departments
+departments:
+  - slug: "creative-direction"
+    name: "Creative Direction"
+    icon: "pen"
+    description: "Story, design, brand. The creative vision behind every production."
+    image: "/assets/images/departments/creative-direction.webp"
+
+  - slug: "research-intelligence"
+    name: "Research & Intelligence"
+    icon: "flask"
+    description: "In-depth research, ORIS Intelligence System. Knowledge before creation."
+    image: "/assets/images/departments/research-intelligence.webp"
+
+  - slug: "production"
+    name: "Production"
+    icon: "clapper"
+    description: "Rendering, editing, technical production. Where ideas become finished work."
+    image: "/assets/images/departments/production.webp"
+
+  - slug: "audience-intelligence"
+    name: "Audience Intelligence"
+    icon: "chart"
+    description: "Measuring impact, analyzing data. Understanding our audience."
+    image: "/assets/images/departments/audience-intelligence.webp"
+
+  - slug: "studio-operations"
+    name: "Studio Operations"
+    icon: "gear"
+    description: "Mission control, infrastructure. The command centre behind everything."
+    image: "/assets/images/departments/studio-operations.webp"
+
+  - slug: "technology-innovation"
+    name: "Technology & Innovation"
+    icon: "rocket"
+    description: "Future department, R&D. Pushing the boundaries of what's possible."
+    image: "/assets/images/departments/technology-innovation.webp"

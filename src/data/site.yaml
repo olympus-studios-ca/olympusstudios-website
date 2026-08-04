@@ -1,0 +1,40 @@
+# ═══════════════════════════════════════════════════════════════
+# Olympus Studios — Site Configuration
+# ═══════════════════════════════════════════════════════════════
+# Source: OBD-001 Brand Design System, WEB-001 Engineering Architecture
+# Configuration-driven: all site metadata lives here.
+
+# Site metadata
+title: "Olympus Studios — Where Creativity Meets Intelligent Production"
+description: "Olympus Studios is a premium creative production studio. From timeless mysteries to natural wonders to quick bursts of knowledge, our productions inform, inspire, and entertain audiences around the world."
+url: "https://olympusstudios.ca"
+author: "Olympus Studios"
+language: "en"
+locale: "en_CA"
+
+# Brand
+brand:
+  name: "Olympus Studios"
+  tagline: "Where creativity meets intelligent production."
+  footer_tagline: "EXPLORE. DISCOVER. BE INSPIRED."
+  copyright: "© 2026 Olympus Studios. All rights reserved."
+  contact_email: "hello@olympusstudios.ca"
+  cta_primary: "STUDIO OPERATIONS"
+  cta_primary_sub: "COMMAND CENTER"
+  cta_shield: true
+
+# Social
+social:
+  youtube: "https://www.youtube.com/@oneminutewonders-v2u"
+  instagram: "https://instagram.com/oneminutewondersai"
+  tiktok: "https://tiktok.com/@oneminutewonderai"
+  facebook: "https://facebook.com/One-minute-wonders"
+
+# Analytics
+analytics:
+  provider: "cloudflare"  # Cloudflare Web Analytics (cookie-free)
+  # Cloudflare Web Analytics token goes here when deployed
+
+# Build
+build:
+  date_format: "MMMM d, yyyy"

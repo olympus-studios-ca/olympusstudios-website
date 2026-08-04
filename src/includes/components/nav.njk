@@ -1,0 +1,42 @@
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Olympus Studios — Home">
+      <!-- Olympus crest SVG icon -->
+      <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false">
+        <path d="M16 2L4 12v8l12 10 12-10v-8L16 2z" stroke="currentColor" fill="none"/>
+        <path d="M16 6l-8 6v6l8 6 8-6v-6l-8-6z" stroke="currentColor" fill="none"/>
+        <path d="M16 10l-4 3.5V17l4 3 4-3v-3.5L16 10z" fill="currentColor"/>
+      </svg>
+      <span class="nav-logo-text"><span class="gold">OLYMPUS</span> STUDIOS</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-links">
+      {% for item in navigation.main %}
+      <li>
+        <a href="{{ item.url }}"
+           class="nav-link{% if (page.url === item.url) or (page.url !== '/' and item.url !== '/' and page.url.startsWith(item.url)) %} active{% endif %}">
+          {{ item.label }}
+        </a>
+      </li>
+      {% endfor %}
+      <li>
+        <a href="/founder/" class="nav-cta">
+          <svg class="nav-cta-icon" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <rect x="3" y="2" width="12" height="14" rx="2"/>
+            <path d="M9 6v4M9 13v.01"/>
+          </svg>
+          <span>
+            {{ site.brand.cta_primary }}
+            <span class="nav-cta-sub">{{ site.brand.cta_primary_sub }}</span>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

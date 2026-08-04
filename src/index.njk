@@ -1,0 +1,283 @@
+---
+layout: base.njk
+title: "Premium Creative Production Studio"
+description: "Olympus Studios is a premium creative production studio. Where creativity meets intelligent production — from timeless mysteries to natural wonders."
+---
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO (WEB-HOME-V01A)
+     ═══════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="/assets/images/hero/hero-home.svg" alt="Inside Olympus Studios — a modern glass-walled creative studio at twilight" fetchpriority="high">
+  </div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-text">
+      <span class="hero-label">Inside Olympus Studios</span>
+      <h1 class="hero-title">OLYMPUS STUDIOS</h1>
+      <p class="hero-subtitle">Where creativity meets intelligent production.</p>
+      <div class="hero-actions">
+        <a href="/productions/" class="btn btn-primary btn-lg">Explore Our Productions</a>
+        <a href="/founder/" class="btn btn-outline btn-lg">Studio Operations</a>
+      </div>
+    </div>
+
+    <div class="hero-logo-overlay" aria-hidden="true">
+      <svg class="hero-logo-svg" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" aria-hidden="true" focusable="false">
+        <path d="M16 2L4 12v8l12 10 12-10v-8L16 2z" stroke="currentColor" fill="none"/>
+        <path d="M16 6l-8 6v6l8 6 8-6v-6l-8-6z" stroke="currentColor" fill="none"/>
+        <path d="M16 10l-4 3.5V17l4 3 4-3v-3.5L16 10z" fill="currentColor"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     OUR VISION / MEET HERMES
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="vision-grid">
+      <div class="vision-text">
+        <span class="section-gold-label">Our Vision</span>
+        <h2>Creativity Without Limits</h2>
+        <div class="gold-line"></div>
+        <p>
+          Olympus Studios was founded on a simple idea: creative storytelling
+          shouldn't be limited by repetitive work. Technology should empower
+          artists, researchers, and creators — not constrain them.
+        </p>
+        <p>
+          We build intelligent production systems that handle the complexity,
+          so human creativity can thrive.
+        </p>
+        <a href="/studio/" class="btn btn-outline">Our Story</a>
+      </div>
+
+      <div class="vision-text">
+        <span class="section-gold-label">Hermes Chief Operating Officer</span>
+        <h2>Meet Hermes</h2>
+        <div class="gold-line"></div>
+        <p>
+          Hermes is the operational mind that oversees our mission — from
+          production leadership to research and intelligence to publishing
+          and distribution.
+        </p>
+        <ul class="vision-list">
+          <li>Production Leadership</li>
+          <li>Research &amp; Intelligence</li>
+          <li>Publishing &amp; Distribution</li>
+          <li>Analytics &amp; Optimization</li>
+          <li>Continuous Improvement</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     THE OLYMPUS PRODUCTION ENGINE (13 steps)
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section engine">
+  <div class="container-wide">
+    <span class="section-gold-label">The Process</span>
+    <h2 class="engine-title">THE OLYMPUS PRODUCTION ENGINE</h2>
+    <div class="gold-line"></div>
+
+    <div class="engine-flow">
+      {% for item in departments.production_engine %}
+      <div class="engine-step">
+        <div class="engine-icon">
+          {% if item.icon === 'bulb' %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/></svg>
+          {% elseif item.icon === 'search' %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+          {% elseif item.icon === 'document' %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg>
+          {% elseif item.icon === 'person' %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+          {% elseif item.icon === 'film' %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 4v16M17 4v16M2 9h5M2 15h5M17 9h5M17 15h5"/></svg>
+          {% elseif item.icon === 'clapper' %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 9l3-3 5 5 3-3 2 2 3-3v11H4V9z"/><path d="M4 12h16"/></svg>
+          {% elseif item.icon === 'mic' %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+          {% elseif item.icon === 'gear' %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2l1.5 3h3l2-2 3 3-2 2v3l3 1.5v4l-3 1.5v3l-3 3-2-2h-3l-1.5 3h-4l-1.5-3H3l-2-2 2-2V9l-2-2 3-3 2 2h3L8 2h4z"/></svg>
+          {% elseif item.icon === 'check' %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>
+          {% elseif item.icon === 'approval' %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4 7.7l5.4-.8L12 2z"/></svg>
+          {% elseif item.icon === 'upload' %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 15V4M8 8l4-4 4 4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          {% elseif item.icon === 'chart' %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>
+          {% elseif item.icon === 'refresh' %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg>
+          {% endif %}
+        </div>
+        <span class="engine-label">{{ item.step }}</span>
+      </div>
+      {% endfor %}
+    </div>
+
+    <p class="engine-footer">A seamless, repeatable system designed for excellence at every step.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FEATURED PRODUCTIONS (WEB-HOME-V01A)
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section section-dark">
+  <div class="container-wide">
+    <span class="section-gold-label">Current Productions</span>
+    <h2 class="section-title">A GROWING UNIVERSE OF STORIES</h2>
+    <div class="gold-line"></div>
+
+    <div class="grid-3">
+      {% for item in productions.productions %}
+      <article class="prod-card" onclick="window.location.href='{{ item.url }}'" role="link" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){window.location.href='{{ item.url }}'}">
+        <div class="prod-card-img">
+          <img src="{{ item.image }}" alt="{{ item.name }}" loading="lazy">
+        </div>
+        <div class="prod-card-overlay"></div>
+        <div class="prod-card-body">
+          <div class="prod-card-tagline">{{ item.tagline }}</div>
+          <h3 class="prod-card-title">{{ item.name }}</h3>
+          <a class="prod-card-cta" href="{{ item.url }}" tabindex="-1">{{ item.cta }}</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     OUR STUDIO DEPARTMENTS
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="container-wide">
+    <span class="section-gold-label">The Studio</span>
+    <h2 class="section-title">OUR STUDIO DEPARTMENTS</h2>
+    <div class="gold-line"></div>
+
+    <div class="dept-grid">
+      {% for item in departments.departments %}
+      <article class="dept-card">
+        <div class="dept-icon">
+          {% if item.icon === 'pen' %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          {% elseif item.icon === 'flask' %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 3h6M10 3v5l-5.5 9.5A2 2 0 0 0 6.2 20h11.6a2 2 0 0 0 1.7-2.5L14 8V3"/><path d="M7.5 14h9"/></svg>
+          {% elseif item.icon === 'clapper' %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 9l3-3 5 5 3-3 2 2 3-3v11H4V9z"/><path d="M4 12h16"/></svg>
+          {% elseif item.icon === 'chart' %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>
+          {% elseif item.icon === 'gear' %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2l1.5 3h3l2-2 3 3-2 2v3l3 1.5v4l-3 1.5v3l-3 3-2-2h-3l-1.5 3h-4l-1.5-3H3l-2-2 2-2V9l-2-2 3-3 2 2h3L8 2h4z"/></svg>
+          {% elseif item.icon === 'rocket' %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 15c-2-1-3-4-3-6a7 7 0 0 1 3-5 7 7 0 0 1 3 5c0 2-1 5-3 6z"/><path d="M9 12H6l-2 4h4l1 5 5-2 1-7"/><circle cx="12" cy="8" r="1.5"/><path d="M5 21c2-1 3-3 3-5"/></svg>
+          {% endif %}
+        </div>
+        <h3 class="dept-name">{{ item.name }}</h3>
+        <p class="dept-desc">{{ item.description }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     VALUES / STORIES THAT MATTER
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="values-grid">
+      <div class="vision-text">
+        <div class="dept-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="4" width="13" height="9" rx="2"/><path d="M15 8h3a3 3 0 0 1 3 3v9"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="18" r="2.5"/></svg>
+        </div>
+        <span class="section-gold-label">Stories That Matter</span>
+        <h2>BUILT FOR FAMILIES</h2>
+        <div class="gold-line"></div>
+        <p>
+          At Olympus Studios, every production is created with purpose. We believe
+          in stories that educate, entertain, and inspire positive change in the world.
+        </p>
+      </div>
+
+      <div class="values-list">
+        <div class="values-item">
+          <div class="values-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="9" cy="9" r="4"/><circle cx="17" cy="12" r="3"/><path d="M3 21c0-3 3-5 6-5s6 2 6 5M15 21c0-2 1.5-3.5 4-3.5s4 1.5 4 3.5"/></svg>
+          </div>
+          <span class="values-label">Built for Families</span>
+        </div>
+        <div class="values-item">
+          <div class="values-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18-3-3-3-15 0-18z"/></svg>
+          </div>
+          <span class="values-label">Created for a Global Audience</span>
+        </div>
+        <div class="values-item">
+          <div class="values-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s-7-4.5-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.5-9 9-9 9z"/></svg>
+          </div>
+          <span class="values-label">Driven by Purpose</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     BUILT FOR THE FUTURE
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="cycle-grid">
+      <div class="vision-text">
+        <span class="section-gold-label">Continuous Improvement</span>
+        <h2>BUILT FOR THE FUTURE</h2>
+        <div class="gold-line"></div>
+        <p>
+          Every production teaches us something new. Every cycle makes the next
+          one better. Better systems. Better stories. Better impact.
+        </p>
+        <div class="cycle-diagram">
+          <div class="cycle-item">Create</div>
+          <div class="cycle-item">Improve</div>
+          <div class="cycle-item">Learn</div>
+          <div class="cycle-item">Measure</div>
+        </div>
+      </div>
+
+      <div class="vision-text">
+        <h3>Our Journey</h3>
+        <ul class="cycle-future-list">
+          <li><strong>Multiple Worlds</strong>Building universes of original productions.</li>
+          <li><strong>AI Collaboration</strong>Intelligent systems handling complexity.</li>
+          <li><strong>Professional Workflows</strong>Enterprise-grade processes.</li>
+          <li><strong>Continuous Growth</strong>Olympus Studios, born from Woodland Pond.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     BOTTOM CTA
+     ═══════════════════════════════════════════════════════════ -->
+<section class="cta-section">
+  <div class="container">
+    <h2>The future of creative production has already begun.</h2>
+    <div class="gold-line"></div>
+    <div class="btn-group">
+      <a href="/productions/" class="btn btn-primary btn-lg">Explore Our Productions</a>
+      <a href="/founder/" class="btn btn-outline btn-lg">Studio Operations</a>
+    </div>
+    <p class="cta-quote">Technology builds the workflow. Creativity brings it to life.</p>
+  </div>
+</section>

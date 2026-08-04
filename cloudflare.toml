@@ -1,0 +1,22 @@
+# Cloudflare Pages — Build Configuration
+# ========================================
+# Place this file at the repository root.
+# Cloudflare Pages auto-detects it for build settings.
+
+[build]
+command = "npm run build"
+output = "_site"
+
+[build.environment]
+NODE_VERSION = "18"
+
+[build.ignore]
+patterns = ["README.md", ".gitignore", "scripts/**"]
+
+# Preview (branch) deployments
+[preview]
+branches = ["*"]
+
+# Production deployment
+[production]
+branches = ["main"]

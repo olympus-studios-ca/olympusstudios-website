@@ -1,0 +1,8 @@
+# Olympus Studios — Redirects
+# Configured at Cloudflare Pages level; local file for reference
+
+# Social media shortcuts
+/youtube    https://www.youtube.com/@oneminutewonders-v2u    302
+/instagram  https://instagram.com/oneminutewondersai         302
+/tiktok     https://tiktok.com/@oneminutewonderai            302
+/facebook   https://facebook.com/One-minute-wonders          302

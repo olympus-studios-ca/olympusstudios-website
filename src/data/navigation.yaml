@@ -1,0 +1,45 @@
+# ═══════════════════════════════════════════════════════════════
+# Olympus Studios — Navigation Data
+# ═══════════════════════════════════════════════════════════════
+# Configuration-driven: add/remove nav items without touching templates.
+
+main:
+  - label: "Home"
+    url: "/"
+  - label: "Productions"
+    url: "/productions/"
+  - label: "The Studio"
+    url: "/studio/"
+  - label: "News"
+    url: "/news/"
+  - label: "Careers"
+    url: "/careers/"
+  - label: "Contact"
+    url: "/contact/"
+
+# Secondary navigation (footer)
+footer:
+  - label: "Productions"
+    url: "/productions/"
+  - label: "The Studio"
+    url: "/studio/"
+  - label: "News"
+    url: "/news/"
+  - label: "Careers"
+    url: "/careers/"
+  - label: "Contact"
+    url: "/contact/"
+  - label: "Privacy Policy"
+    url: "/privacy/"
+  - label: "YouTube"
+    url: "https://www.youtube.com/@oneminutewonders-v2u"
+    external: true
+  - label: "Instagram"
+    url: "https://instagram.com/oneminutewondersai"
+    external: true
+  - label: "TikTok"
+    url: "https://tiktok.com/@oneminutewonderai"
+    external: true
+  - label: "Facebook"
+    url: "https://facebook.com/One-minute-wonders"
+    external: true

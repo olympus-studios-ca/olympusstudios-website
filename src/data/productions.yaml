@@ -1,0 +1,45 @@
+# ═══════════════════════════════════════════════════════════════
+# Olympus Studios — Production Registry
+# ═══════════════════════════════════════════════════════════════
+# Configuration-driven production registry.
+# Add a new production brand by adding an entry here — NO code changes.
+# The homepage, productions page, and cards all auto-populate.
+
+productions:
+  - slug: "woodland-pond"
+    name: "Woodland Pond"
+    tagline: "Family Adventures. Nature. Life Lessons."
+    description: "Join Pip the Rabbit, Daisy the Duck, and all their woodland friends on magical adventures in the heart of the forest."
+    image: "/assets/images/productions/woodland-pond.svg"
+    status: "active"
+    cta: "EXPLORE WOODLAND POND"
+    url: "/productions/woodland-pond/"
+
+  - slug: "one-minute-wonders"
+    name: "One Minute Wonders"
+    tagline: "One Minute. Endless Curiosity."
+    description: "Quick bursts of knowledge that inform, inspire, and entertain audiences around the world in just one minute."
+    image: "/assets/images/productions/one-minute-wonders.svg"
+    status: "active"
+    cta: "EXPLORE ONE MINUTE WONDERS"
+    url: "/productions/one-minute-wonders/"
+
+  - slug: "shadow-files"
+    name: "Shadow Files"
+    tagline: "Unsolved. Unforgotten. Unearthed."
+    description: "Evidence-based explorations of the mysteries that refuse to be forgotten. Real cases, real evidence, real questions."
+    image: "/assets/images/productions/shadow-files.svg"
+    status: "active"
+    cta: "OPEN SHADOW FILES"
+    url: "/productions/shadow-files/"
+
+# Future productions (locked, shown with padlock)
+future_productions:
+  - label: "Future Production"
+    status: "In Development"
+  - label: "Future Production"
+    status: "In Development"
+  - label: "Future Production"
+    status: "In Development"
+  - label: "Future Production"
+    status: "In Development"
