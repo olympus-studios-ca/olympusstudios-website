@@ -1,4 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240">
-  <rect width="400" height="240" fill="#1A1E2E"/>
-  <text x="200" y="120" text-anchor="middle" fill="#D4AF37" font-family="serif" font-size="14" opacity="0.4">Department</text>
+  <defs>
+    <linearGradient id="cd-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D0D0F"/>
+      <stop offset="50%" style="stop-color:#1A1E2E"/>
+      <stop offset="100%" style="stop-color:#0D0D0F"/>
+    </linearGradient>
+    <linearGradient id="cd-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37"/>
+      <stop offset="100%" style="stop-color:#F5D76E"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#cd-bg)"/>
+  <rect x="10" y="10" width="380" height="220" rx="4" fill="none" stroke="url(#cd-gold)" stroke-width="0.5" opacity="0.25"/>
+  <!-- Pen icon motif -->
+  <g transform="translate(200,85)" fill="none" stroke="url(#cd-gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7">
+    <path d="M17 3a2.83 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/>
+    <path d="m15 5 4 4"/>
+  </g>
+  <text x="200" y="155" text-anchor="middle" font-family="Cinzel, Georgia, serif" font-size="16" font-weight="600" fill="url(#cd-gold)" letter-spacing="3">CREATIVE DIRECTION</text>
+  <text x="200" y="178" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="10" fill="#808090" letter-spacing="2">STORY · DESIGN · BRAND</text>
+  <!-- Gold underline accent -->
+  <line x1="140" y1="195" x2="260" y2="195" stroke="url(#cd-gold)" stroke-width="0.5" opacity="0.4"/>
 </svg>

@@ -5,6 +5,41 @@
 
 ---
 
+## v1.0.2-alpha — 2026-08-04
+
+### Identity & Content — WEB-003
+Final identity and content completion of the Public Experience (MVP). After this version the website transitions to normal maintenance.
+
+### Major Changes
+- **Department Identity SVGs:** Replaced all 6 generic grey-box placeholder SVGs with branded Olympus identity cards (dark gradient background, gold accent, department icon motif, Cinzel title, Montserrat subtitle, gold underline) — Creative Direction, Research & Intelligence, Production, Audience Intelligence, Studio Operations, Technology & Innovation
+- **Department image refs corrected:** Fixed `departments.yaml` image references from `.webp` to `.svg` (6 files), resolving broken-extension mismatch
+- **Apple Touch Icon:** Generated 180×180 PNG from the approved favicon SVG crest — now resolves for mobile bookmarks
+- **Production Identity Verification:** All 3 active production card copies verified against brand profiles (BR-002 OMW, BR-003 Shadow Files, Woodland Pond). Shadow Files accent color (`#E8A838`) matches BR-003 exactly. OMW accent (`#E94560` red) differs from BR-002 spec (`#4A90D9` blue) — flagged for Founder review.
+
+### Build Milestone
+- **Total Pages:** 7 (all HTTP 200 on live)
+- **Build Time:** 0.12s (unchanged)
+- **Deployment:** 60812187 — all 5 stages succeeded (queued, initialize, clone, build, deploy)
+
+### Asset Inventory
+- 15 static asset files served (6 dept SVGs, 3 production SVGs, 3 hero SVGs, 3 brand assets)
+- 6 department identity cards created (400×240, branded)
+- Apple touch icon created (180×180 PNG, 8.5 KB)
+
+### Remaining Placeholders
+- 4 future productions still generic "New Production / In Development" (P4 — post-MVP enhancement)
+- Department image SVGs not yet consumed by templates (templates use inline SVG icons) — `item.image` field in `departments.yaml` is correct but unused; ready for future template adoption
+- OG image remains SVG (not WebP) — deferred to post-MVP
+- Cloudflare Web Analytics token not configured — P2 backlog item
+- Custom domain (`olympusstudios.ca`) DNS delegation remains deferred
+
+### Known Issues
+- OMW accent color: website uses `#E94560` (red) per approved WEB-002 design; BR-002 profile specifies `#4A90D9` (blue) — Founder decision needed
+- GitHub push to `main` still does not auto-trigger Cloudflare Pages build (webhook integration issue)
+- Sharp CVEs (2 high) remain deferred
+
+---
+
 ## v1.0.1-alpha — 2026-08-04
 
 ### Public Experience — WEB-002

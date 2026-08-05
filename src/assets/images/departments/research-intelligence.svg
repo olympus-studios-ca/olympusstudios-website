@@ -1,5 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240">
-  <rect width="400" height="240" fill="#1A1E2E"/>
-  <text x="200" y="120" text-anchor="middle" fill="#D4AF37" font-family="serif" font-size="14" opacity="0.4">Department</text>
+  <defs>
+    <linearGradient id="ri-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D0D0F"/>
+      <stop offset="50%" style="stop-color:#1A1E2E"/>
+      <stop offset="100%" style="stop-color:#0D0D0F"/>
+    </linearGradient>
+    <linearGradient id="ri-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37"/>
+      <stop offset="100%" style="stop-color:#F5D76E"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#ri-bg)"/>
+  <rect x="10" y="10" width="380" height="220" rx="4" fill="none" stroke="url(#ri-gold)" stroke-width="0.5" opacity="0.25"/>
+  <!-- Flask/research icon motif -->
+  <g transform="translate(200,85)" fill="none" stroke="url(#ri-gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7">
+    <path d="M9 3h6M10 3v5l-5.5 9.5a2 2 0 0 0 1.2 2.8 2 2 0 0 0 .8.2h11.6a2 2 0 0 0 2-2 2 2 0 0 0-.3-1L14 8V3"/>
+    <path d="M7.5 14h9"/>
+  </g>
+  <text x="200" y="155" text-anchor="middle" font-family="Cinzel, Georgia, serif" font-size="16" font-weight="600" fill="url(#ri-gold)" letter-spacing="3">RESEARCH &amp; INTELLIGENCE</text>
+  <text x="200" y="178" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="10" fill="#808090" letter-spacing="2">KNOWLEDGE BEFORE CREATION</text>
+  <line x1="140" y1="195" x2="260" y2="195" stroke="url(#ri-gold)" stroke-width="0.5" opacity="0.4"/>
 </svg>

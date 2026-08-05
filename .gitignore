@@ -6,3 +6,5 @@ _site/
 *.local
 # Temporary screenshot capture scripts (playwright)
 screenshot-*.js
+# Cloudflare deployment helper (contains API token — never commit)
+deploy_cf.py
