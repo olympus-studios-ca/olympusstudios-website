@@ -2,20 +2,35 @@
 layout: base.njk
 title: "The Studio"
 description: "Meet Olympus Studios — where creativity meets intelligent production. Our story, our team, our mission, our production engine."
+permalink: "/studio/"
 ---
 
 <!-- ═══════════════════════════════════════════════════════════
      STUDIO HERO (WEB-STUDIO-V01)
      ═══════════════════════════════════════════════════════════ -->
-<section class="section" style="padding-top: calc(var(--nav-height) + var(--space-12));">
-  <div class="container">
-    <span class="section-gold-label">The Studio</span>
-    <h2 class="section-title">ABOUT OLYMPUS STUDIOS</h2>
+<section class="page-header">
+  <div class="page-header-bg">
+    <img src="/assets/images/hero/studio-hero.svg" alt="Cinematic depth — the Olympus Studios production environment" loading="eager">
+  </div>
+  <div class="page-header-overlay"></div>
+  <div class="page-header-content">
+    <span class="section-gold-label page-header-label">The Studio</span>
     <div class="gold-line"></div>
+    <h1 class="page-header-title">ABOUT OLYMPUS STUDIOS</h1>
+    <p class="page-header-desc">Where creativity meets intelligent production. Explore the vision, the engine, and the people behind every story.</p>
+  </div>
+</section>
 
-    <div class="grid-2" style="margin-top:var(--space-12)">
-      <div>
-        <h3 class="studio-heading">Our Story</h3>
+<!-- ═══════════════════════════════════════════════════════════
+     OUR STORY / OUR MISSION (WEB-STUDIO-V01)
+     ═══════════════════════════════════════════════════════════ -->
+<section class="section studio-story fade-in-section">
+  <div class="container">
+    <div class="grid-2">
+      <div class="vision-text">
+        <span class="section-gold-label">Our Story</span>
+        <h2>THE OLYMPUS STORY</h2>
+        <div class="gold-line left"></div>
         <p class="studio-text">
           Olympus Studios was founded to create a new kind of creative production studio —
           one where technology amplifies human creativity rather than replacing it.
@@ -33,8 +48,10 @@ description: "Meet Olympus Studios — where creativity meets intelligent produc
           more connected world.
         </p>
       </div>
-      <div>
-        <h3 class="studio-heading">Our Mission</h3>
+      <div class="vision-text">
+        <span class="section-gold-label">Our Mission</span>
+        <h2>STORIES THAT MATTER</h2>
+        <div class="gold-line left"></div>
         <p class="studio-text">
           To create stories that matter — for families, for a global audience,
           with purpose. We believe in the power of narrative to educate, inspire,
@@ -66,31 +83,34 @@ description: "Meet Olympus Studios — where creativity meets intelligent produc
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════
-     MEET HERMES
+     THE OLYMPUS VISION / MEET HERMES
      ═══════════════════════════════════════════════════════════ -->
-<section class="section section-dark">
+<section class="section section-dark fade-in-section">
   <div class="container">
-    <div class="vision-grid">
+    <span class="section-gold-label">The Olympus Vision</span>
+    <h2 class="section-title">CREATIVITY WITHOUT LIMITS</h2>
+    <div class="gold-line"></div>
+    <p class="section-description">Technology should empower artists, researchers, and creators — not constrain them.</p>
+
+    <div class="vision-grid" style="margin-top:var(--space-12)">
       <div class="vision-text">
-        <span class="section-gold-label">Our Vision</span>
-        <h2>Creativity Without Limits</h2>
-        <div class="gold-line"></div>
-        <p>
+        <span class="section-gold-label">The Vision</span>
+        <p class="studio-text">
           Olympus Studios was founded on a simple idea: creative storytelling
           shouldn't be limited by repetitive work. Technology should empower
           artists, researchers, and creators — not constrain them.
         </p>
-        <p>
+        <p class="studio-text">
           We build intelligent production systems that handle the complexity,
           so human creativity can thrive.
         </p>
       </div>
 
-      <div class="vision-text">
-        <span class="section-gold-label">Hermes Chief Operating Officer</span>
-        <h2>Meet Hermes</h2>
-        <div class="gold-line"></div>
-        <p>
+      <div class="hermes-card">
+        <span class="section-gold-label">Hermes · Chief Operating Officer</span>
+        <h3 class="hermes-name">MEET HERMES</h3>
+        <div class="gold-line left"></div>
+        <p class="studio-text">
           Hermes is the operational mind that oversees our mission — from
           production leadership to research and intelligence to publishing
           and distribution. An intelligent agent that orchestrates every
@@ -111,10 +131,10 @@ description: "Meet Olympus Studios — where creativity meets intelligent produc
 <!-- ═══════════════════════════════════════════════════════════
      THE OLYMPUS PRODUCTION ENGINE
      ═══════════════════════════════════════════════════════════ -->
-<section class="section engine">
+<section class="section engine fade-in-section">
   <div class="container-wide">
     <span class="section-gold-label">The Process</span>
-    <h2 class="engine-title">THE OLYMPUS PRODUCTION ENGINE</h2>
+    <h2 class="section-title">THE OLYMPUS PRODUCTION ENGINE</h2>
     <div class="gold-line"></div>
     <p class="section-description">A seamless, repeatable system designed for excellence at every step. From concept to audience intelligence, every production flows through this proven pipeline.</p>
 
@@ -150,21 +170,24 @@ description: "Meet Olympus Studios — where creativity meets intelligent produc
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg>
           {% endif %}
         </div>
+        <span class="engine-step-num">{{ loop.index | pad }}</span>
         <span class="engine-label">{{ item.step }}</span>
       </div>
       {% endfor %}
     </div>
+    <p class="engine-footer">From first spark to lasting impact — a complete cycle of creation.</p>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════
      STUDIO DEPARTMENTS
      ═══════════════════════════════════════════════════════════ -->
-<section class="section section-dark">
+<section class="section section-dark fade-in-section">
   <div class="container-wide">
-    <span class="section-gold-label">The Studio</span>
+    <span class="section-gold-label page-header-label">The Studio</span>
     <h2 class="section-title">OUR DEPARTMENTS</h2>
     <div class="gold-line"></div>
+    <p class="section-description">Disciplined departments working as one intelligent studio. Every function is designed to deliver excellence.</p>
 
     <div class="dept-grid">
       {% for item in departments.departments %}
@@ -195,14 +218,14 @@ description: "Meet Olympus Studios — where creativity meets intelligent produc
 <!-- ═══════════════════════════════════════════════════════════
      PHILOSOPHY & CONTINUOUS IMPROVEMENT
      ═══════════════════════════════════════════════════════════ -->
-<section class="section">
+<section class="section fade-in-section">
   <div class="container">
     <div class="cycle-grid">
       <div class="vision-text">
         <span class="section-gold-label">Our Philosophy</span>
         <h2>BUILT FOR THE FUTURE</h2>
-        <div class="gold-line"></div>
-        <p>
+        <div class="gold-line left"></div>
+        <p class="studio-text">
           Every production teaches us something new. Every cycle makes the next
           one better. Better systems. Better stories. Better impact.
         </p>
@@ -215,7 +238,9 @@ description: "Meet Olympus Studios — where creativity meets intelligent produc
       </div>
 
       <div class="vision-text">
-        <h3>Engineering Standards</h3>
+        <span class="section-gold-label">Engineering Standards</span>
+        <h3>ENGINEERING &amp; EXCELLENCE</h3>
+        <div class="gold-line left"></div>
         <ul class="cycle-future-list">
           <li><strong>Existing Capability First</strong> — Use what already works before building new.</li>
           <li><strong>Research Before Build</strong> — Knowledge before implementation.</li>

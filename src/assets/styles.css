@@ -915,6 +915,45 @@ p { margin-bottom: var(--space-4); }
   border-color: var(--gold-light);
 }
 
+/* Production brand accent borders */
+.prod-card-brand-wp {
+  border-bottom: 2px solid #2D6A4F;
+}
+.prod-card-brand-wp:hover {
+  border-bottom-color: #4CAF50;
+}
+.prod-card-brand-omw {
+  border-bottom: 2px solid #E94560;
+}
+.prod-card-brand-omw:hover {
+  border-bottom-color: #FF6B6B;
+}
+.prod-card-brand-sf {
+  border-bottom: 2px solid #E8A838;
+}
+.prod-card-brand-sf:hover {
+  border-bottom-color: #F5C542;
+}
+
+/* Production card brand indicator dot */
+.prod-card-brand {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  z-index: 3;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  opacity: 0.7;
+  transition: opacity var(--transition-fast);
+}
+.prod-card:hover .prod-card-brand {
+  opacity: 1;
+}
+.prod-card-brand-wp-dot { background: #2D6A4F; }
+.prod-card-brand-omw-dot { background: #E94560; }
+.prod-card-brand-sf-dot { background: #E8A838; }
+
 @media (max-width: 767px) {
   .prod-card {
     aspect-ratio: 16 / 12;
@@ -1147,6 +1186,67 @@ p { margin-bottom: var(--space-4); }
 .studio-mission-icon svg {
   width: 100%;
   height: 100%;
+}
+
+/* Left-aligned gold divider */
+.gold-line.left {
+  margin: var(--space-4) 0;
+}
+
+/* Studio story section */
+.studio-story .grid-2 {
+  align-items: start;
+  gap: var(--space-16);
+}
+@media (max-width: 767px) {
+  .studio-story .grid-2 {
+    gap: var(--space-10);
+  }
+}
+
+/* Hermes card */
+.hermes-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+.hermes-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--gold), var(--gold-light));
+  opacity: 0.6;
+}
+.hermes-card:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: var(--shadow-gold);
+}
+.hermes-card .section-gold-label {
+  text-align: left;
+}
+.hermes-name {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  color: var(--text-primary);
+  letter-spacing: var(--tracking-wider);
+  margin-bottom: var(--space-2);
+}
+
+/* Engine step numbers */
+.engine-step-num {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--gold);
+  opacity: 0.6;
+  margin-bottom: var(--space-2);
+  letter-spacing: var(--tracking-wide);
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -1648,6 +1748,25 @@ p { margin-bottom: var(--space-4); }
   font-size: var(--text-lg);
   max-width: 600px;
   margin: 0 auto;
+}
+
+/* Page header entry animation */
+.page-header .page-header-label {
+  animation: slideUp 0.6s ease forwards;
+  opacity: 0;
+}
+.page-header .page-header-title {
+  animation: letterReveal 0.8s ease 0.2s forwards;
+  opacity: 0;
+}
+.page-header .page-header-desc {
+  animation: fadeInUp 0.6s ease 0.4s forwards;
+  opacity: 0;
+}
+.page-header .gold-line {
+  animation: goldLineExpand 0.5s ease 0.1s forwards;
+  width: 0;
+  opacity: 0;
 }
 
 @media (max-width: 767px) {

@@ -2,6 +2,7 @@
 layout: base.njk
 title: "Productions"
 description: "A growing universe of stories, knowledge, and imagination. Explore Olympus Studios productions — Woodland Pond, One Minute Wonders, and Shadow Files."
+permalink: "/productions/"
 ---
 
 <!-- ═══════════════════════════════════════════════════════════
@@ -13,7 +14,7 @@ description: "A growing universe of stories, knowledge, and imagination. Explore
   </div>
   <div class="page-header-overlay"></div>
   <div class="page-header-content">
-    <span class="section-gold-label">Our Productions</span>
+    <span class="section-gold-label page-header-label">Our Productions</span>
     <div class="gold-line"></div>
     <h1 class="page-header-title">OUR PRODUCTIONS</h1>
     <p class="page-header-desc">A growing universe of stories, knowledge, and imagination.</p>
@@ -23,7 +24,7 @@ description: "A growing universe of stories, knowledge, and imagination. Explore
 <!-- ═══════════════════════════════════════════════════════════
      ACTIVE PRODUCTIONS
      ═══════════════════════════════════════════════════════════ -->
-<section class="section">
+<section class="section fade-in-section">
   <div class="container-wide">
     <h2 class="section-title">ACTIVE PRODUCTIONS</h2>
     <div class="gold-line"></div>
@@ -31,11 +32,22 @@ description: "A growing universe of stories, knowledge, and imagination. Explore
 
     <div class="grid-3">
       {% for item in productions.productions %}
-      <article class="prod-card" onclick="window.location.href='{{ item.url }}'" role="link" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){window.location.href='{{ item.url }}'}">
+      {% set brandClass = "" %}
+      {% if item.slug === 'woodland-pond' %}{% set brandClass = "prod-card-brand-wp" %}{% endif %}
+      {% if item.slug === 'one-minute-wonders' %}{% set brandClass = "prod-card-brand-omw" %}{% endif %}
+      {% if item.slug === 'shadow-files' %}{% set brandClass = "prod-card-brand-sf" %}{% endif %}
+
+      {% set brandDot = "" %}
+      {% if item.slug === 'woodland-pond' %}{% set brandDot = "prod-card-brand-wp-dot" %}{% endif %}
+      {% if item.slug === 'one-minute-wonders' %}{% set brandDot = "prod-card-brand-omw-dot" %}{% endif %}
+      {% if item.slug === 'shadow-files' %}{% set brandDot = "prod-card-brand-sf-dot" %}{% endif %}
+
+      <article class="prod-card {{ brandClass }}" onclick="window.location.href='{{ item.url }}'" role="link" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){window.location.href='{{ item.url }}'}">
         <div class="prod-card-img">
           <img src="{{ item.image }}" alt="{{ item.name }}" loading="lazy">
         </div>
         <div class="prod-card-overlay"></div>
+        <div class="prod-card-brand {{ brandDot }}" aria-hidden="true"></div>
         <div class="prod-card-body">
           <div class="prod-card-tagline">{{ item.tagline }}</div>
           <h3 class="prod-card-title">{{ item.name }}</h3>
@@ -51,7 +63,7 @@ description: "A growing universe of stories, knowledge, and imagination. Explore
 <!-- ═══════════════════════════════════════════════════════════
      FUTURE PRODUCTIONS
      ═══════════════════════════════════════════════════════════ -->
-<section class="section section-dark">
+<section class="section section-dark fade-in-section">
   <div class="container-wide">
     <span class="section-gold-label">Coming Soon</span>
     <h2 class="section-title">FUTURE PRODUCTIONS</h2>
@@ -76,7 +88,7 @@ description: "A growing universe of stories, knowledge, and imagination. Explore
 <!-- ═══════════════════════════════════════════════════════════
      STORIES THAT MATTER
      ═══════════════════════════════════════════════════════════ -->
-<section class="section">
+<section class="section fade-in-section">
   <div class="container">
     <div class="values-grid">
       <div class="vision-text">

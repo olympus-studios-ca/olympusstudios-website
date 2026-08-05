@@ -50,6 +50,11 @@ module.exports = function (eleventyConfig) {
     return (productions || []).find((p) => p.slug === slug);
   });
 
+  // Pad number to 2 digits
+  eleventyConfig.addFilter("pad", (num) => {
+    return String(num).padStart(2, "0");
+  });
+
   // ── Collections ─────────────────────────────────────────
 
   // ── Return config ───────────────────────────────────────

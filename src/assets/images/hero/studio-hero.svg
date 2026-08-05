@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="600" viewBox="0 0 1440 600">
+  <defs>
+    <linearGradient id="s-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A14"/>
+      <stop offset="50%" style="stop-color:#121626"/>
+      <stop offset="100%" style="stop-color:#0A0A14"/>
+    </linearGradient>
+    <linearGradient id="s-glow" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.08"/>
+      <stop offset="50%" style="stop-color:#D4AF37;stop-opacity:0.04"/>
+      <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:0"/>
+    </linearGradient>
+    <radialGradient id="s-center" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.06"/>
+      <stop offset="60%" style="stop-color:#D4AF37;stop-opacity:0"/>
+    </radialGradient>
+    <linearGradient id="s-bot-edge" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0A14;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#0A0A14;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#0A0A14;stop-opacity:0.95"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="600" fill="url(#s-bg)"/>
+  <rect width="1440" height="600" fill="url(#s-glow)"/>
+  <rect width="1440" height="600" fill="url(#s-center)"/>
+
+  <!-- Architectural depth lines — studio feel -->
+  <g stroke="#D4AF37" stroke-width="0.3" opacity="0.06">
+    <line x1="0" y1="120" x2="1440" y2="120"/>
+    <line x1="0" y1="240" x2="1440" y2="240"/>
+    <line x1="0" y1="360" x2="1440" y2="360"/>
+    <line x1="0" y1="480" x2="1440" y2="480"/>
+  </g>
+  <g stroke="#D4AF37" stroke-width="0.5" opacity="0.04">
+    <line x1="360" y1="0" x2="360" y2="600"/>
+    <line x1="720" y1="0" x2="720" y2="600"/>
+    <line x1="1080" y1="0" x2="1080" y2="600"/>
+  </g>
+
+  <!-- Shield watermark central -->
+  <g transform="translate(720, 300)" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.05">
+    <path d="M0,-160 L120,-80 V80 C120,175 0,220 0,220 C0,220 -120,175 -120,80 V-80 L0,-160Z"/>
+    <path d="M0,-100 L80,-50 V40 C80,105 0,135 0,135 C0,135 -80,105 -80,40 V-50 L0,-100Z"/>
+  </g>
+
+  <!-- Decorative stars -->
+  <g fill="#D4AF37" opacity="0.15">
+    <circle cx="180" cy="450" r="2.5"/>
+    <circle cx="320" cy="520" r="1.5"/>
+    <circle cx="500" cy="480" r="1"/>
+    <circle cx="960" cy="460" r="2.5"/>
+    <circle cx="1120" cy="530" r="1.5"/>
+    <circle cx="1300" cy="490" r="1"/>
+    <circle cx="140" cy="120" r="2"/>
+    <circle cx="1280" cy="110" r="2"/>
+    <circle cx="600" cy="80" r="1.5"/>
+    <circle cx="850" cy="70" r="1.5"/>
+  </g>
+
+  <!-- Gold accent lines on edges -->
+  <g stroke="#D4AF37" stroke-width="0.5" opacity="0.08">
+    <line x1="0" y1="300" x2="80" y2="300"/>
+    <line x1="1360" y1="300" x2="1440" y2="300"/>
+  </g>
+
+  <!-- Bottom fade -->
+  <rect x="0" y="450" width="1440" height="150" fill="url(#s-bot-edge)"/>
+</svg>

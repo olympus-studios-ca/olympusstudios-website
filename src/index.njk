@@ -138,11 +138,22 @@ description: "Olympus Studios is a premium creative production studio. Where cre
 
     <div class="grid-3">
       {% for item in productions.productions %}
-      <article class="prod-card" onclick="window.location.href='{{ item.url }}'" role="link" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){window.location.href='{{ item.url }}'}">
+      {% set brandClass = "" %}
+      {% if item.slug === 'woodland-pond' %}{% set brandClass = "prod-card-brand-wp" %}{% endif %}
+      {% if item.slug === 'one-minute-wonders' %}{% set brandClass = "prod-card-brand-omw" %}{% endif %}
+      {% if item.slug === 'shadow-files' %}{% set brandClass = "prod-card-brand-sf" %}{% endif %}
+
+      {% set brandDot = "" %}
+      {% if item.slug === 'woodland-pond' %}{% set brandDot = "prod-card-brand-wp-dot" %}{% endif %}
+      {% if item.slug === 'one-minute-wonders' %}{% set brandDot = "prod-card-brand-omw-dot" %}{% endif %}
+      {% if item.slug === 'shadow-files' %}{% set brandDot = "prod-card-brand-sf-dot" %}{% endif %}
+
+      <article class="prod-card {{ brandClass }}" onclick="window.location.href='{{ item.url }}'" role="link" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){window.location.href='{{ item.url }}'}">
         <div class="prod-card-img">
           <img src="{{ item.image }}" alt="{{ item.name }}" loading="lazy">
         </div>
         <div class="prod-card-overlay"></div>
+        <div class="prod-card-brand {{ brandDot }}" aria-hidden="true"></div>
         <div class="prod-card-body">
           <div class="prod-card-tagline">{{ item.tagline }}</div>
           <h3 class="prod-card-title">{{ item.name }}</h3>
