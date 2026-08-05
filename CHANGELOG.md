@@ -34,7 +34,7 @@ Final identity and content completion of the Public Experience (MVP). After this
 - Custom domain (`olympusstudios.ca`) DNS delegation remains deferred
 
 ### Known Issues
-- OMW accent color: website uses `#E94560` (red) per approved WEB-002 design; BR-002 profile specifies `#4A90D9` (blue) — Founder decision needed
+- OMW accent color: website uses `#E94560` (red) per approved WEB-002 design and per **Founder Decision (2026-08-04)** — red retained for consistency with approved Creative Masters. BR-002 profile difference (`#4A90D9` blue) documented only.
 - GitHub push to `main` still does not auto-trigger Cloudflare Pages build (webhook integration issue)
 - Sharp CVEs (2 high) remain deferred
 
